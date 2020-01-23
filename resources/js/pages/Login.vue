@@ -1,41 +1,58 @@
-<!-- HTML SECTION -->
 <template>
-    <div class="container">
-        <div class="login-box">
-            <div class="login-logo">
-                <router-link :to="{ name: 'home' }"><b>DW</b>Laundry</router-link>
-            </div>
-            <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
-
-                <div class="form-group has-feedback" :class="{'has-error': errors.email}">
-                    <input type="email" class="form-control" placeholder="Email" v-model="data.email">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    <p class="text-danger" v-if="errors.email">{{ errors.email[0] }}</p>
-                </div>
-                <div class="form-group has-feedback" :class="{'has-error': errors.password}">
-                    <input type="password" class="form-control" placeholder="Password" v-model="data.password">
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    <p class="text-danger" v-if="errors.password">{{ errors.password[0] }}</p>
-                </div>
-                <div class="alert alert-danger" v-if="errors.invalid">{{ errors.invalid }}</div>
-                <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" v-model="data.remember_me"> Remember Me
-                            </label>
+   <div class="login-container">
+            <div class="login-box animated fadeInDown">
+                <div class="login-logo"></div>
+                <div class="login-body">
+                    <div class="login-title"><strong>Log In</strong> to your account</div>
+                    <form action="index.html" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="E-mail"/>
                         </div>
                     </div>
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat" @click.prevent="postLogin">Login</button>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="Password"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-link btn-block">Forgot your password?</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-info btn-block">Log In</button>
+                        </div>
+                    </div>
+                    <div class="login-or">OR</div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-twitter"><span class="fa fa-twitter"></span> Twitter</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-facebook"><span class="fa fa-facebook"></span> Facebook</button>
+                        </div>
+                        <div class="col-md-4">                            
+                            <button class="btn btn-info btn-block btn-google"><span class="fa fa-google-plus"></span> Google</button>
+                        </div>
+                    </div>
+                    <div class="login-subtitle">
+                        Don't have an account yet? <a href="#">Create an account</a>
+                    </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="pull-left">
+                        &copy; 2014 AppName
+                    </div>
+                    <div class="pull-right">
+                        <a href="#">About</a> |
+                        <a href="#">Privacy</a> |
+                        <a href="#">Contact Us</a>
                     </div>
                 </div>
-
-                <a href="#">I forgot my password</a><br>
             </div>
+            
         </div>
-    </div>
 </template>
 
 <!-- JAVASCRIPT SECTION -->
