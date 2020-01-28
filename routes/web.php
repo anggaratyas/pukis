@@ -11,14 +11,13 @@
 |
 */
 
-// Route::get('/{any}', function () {
+// Route::get('/', function () {
 //     return view('welcome');
-// })->where('any', '.*');
+// });
 
 Route::get('/{any}', 'FrontController@index')->where('any', '.*');
-// Route::post('/login', 'Auth\LoginController@login');
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 

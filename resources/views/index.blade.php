@@ -13,8 +13,8 @@
         <link rel="stylesheet" type="text/css" id="theme" href="{{url('/assets/css/theme-default.css') }}"/>
         <!-- EOF CSS INCLUDE -->   
 </head>
-<body class="hold-transition skin-blue layout-top-nav">
-  
+<body>
+
     <div id="pks">
         <app></app>
     </div>
